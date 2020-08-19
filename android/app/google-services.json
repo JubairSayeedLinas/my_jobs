@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "63785401647",
+    "firebase_url": "https://mjobs-57a5f.firebaseio.com",
+    "project_id": "mjobs-57a5f",
+    "storage_bucket": "mjobs-57a5f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63785401647:android:73e8d206f38717e3a8b5da",
+        "android_client_info": {
+          "package_name": "com.linixlab.my_jobs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "63785401647-i42egll39idm686k5cl20id1fcebe4qb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyjWkvXf_LR20wft7_YAHMAXgBrJ2ugHI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "63785401647-i42egll39idm686k5cl20id1fcebe4qb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
