@@ -78,9 +78,6 @@ class SearchPageState extends State<SearchPage>{
              builder: (context,snapshot){
                if(!snapshot.hasData) {
                  const Text("Loading");
-
-
-
                }
                else{
                  List<DropdownMenuItem> categoryItems=[];
