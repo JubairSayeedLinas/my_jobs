@@ -79,7 +79,7 @@ class SearchPageState extends State<SearchPage>{
                if(!snapshot.hasData) {
                  const Text("Loading");
 
-                 //return Container(width: 0.0, height: 0.0);
+
 
                }
                else{
