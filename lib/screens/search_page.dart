@@ -30,7 +30,9 @@ class SearchPageState extends State<SearchPage>{
         title: Text('Search'),
       ),
 
-     body: Form(
+     
+
+      body: Form(
        key: _formKeyValue,
          autovalidate: true,
        child: ListView(
@@ -76,10 +78,6 @@ class SearchPageState extends State<SearchPage>{
              builder: (context,snapshot){
                if(!snapshot.hasData) {
                  const Text("Loading");
-                  return const Center(
-                    child: const CupertinoActivityIndicator(),
-                  );
-                 //return Container(width: 0.0, height: 0.0);
 
                }
                else{
