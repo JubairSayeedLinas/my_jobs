@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_jobs/screens/list_page.dart';
 import 'package:my_jobs/screens/search_page.dart';
 
 void main ()=> runApp(MyApp());
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       home: new MyHomePage(),
       routes: <String, WidgetBuilder>{
         '/search': (BuildContext context) => new SearchPage(),
+        '/list': (BuildContext context) => new ListPage(),
       },
     );
   }
