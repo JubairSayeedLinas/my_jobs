@@ -48,7 +48,8 @@ class _ListPageState extends State<ListPage> {
         title: Text('List'),
       ),
       body: StreamBuilder(
-        stream: Firestore.instance.collection('test').snapshots(),
+        stream: Firestore.instance.collection('test')/*.where('general', isEqualTo: widget.selectedType)*/
+            .snapshots(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (!snapshot.hasData) {
             return Center(
