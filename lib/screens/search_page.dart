@@ -3,6 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart'; 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_jobs/screens/list_page.dart';
 
 
 
@@ -40,7 +41,6 @@ class SearchPageState extends State<SearchPage>{
            children: <Widget>[
 
              new TextField(
-
                decoration: InputDecoration(
                  icon: Icon(
                        FontAwesomeIcons.key,
@@ -57,7 +57,7 @@ class SearchPageState extends State<SearchPage>{
                // ignore: missing_return
                builder: (context, snapshot) {
                  if (!snapshot.hasData)
-                   const Text("Loading.....");
+                   return Text("Loading.....");
                  else {
                    List<DropdownMenuItem> categoryItems = [];
                    for (int i = 0; i < snapshot.data.documents.length; i++) {
@@ -120,13 +120,13 @@ class SearchPageState extends State<SearchPage>{
                // ignore: missing_return
                builder: (context, snapshot) {
                  if (!snapshot.hasData)
-                   const Text("Loading.....");
+                   return Text("Loading.....");
                  else {
                    List<DropdownMenuItem> specialItems = [];
                    for (int i = 0; i < snapshot.data.documents.length; i++) {
                      DocumentSnapshot snap = snapshot.data.documents[i];
                      specialItems.add(
-                       DropdownMenuItem(
+                        DropdownMenuItem(
                          child: Text(
                            snap.documentID,
                            style: TextStyle(color: Color(0xff11b719)),
@@ -200,7 +200,17 @@ class SearchPageState extends State<SearchPage>{
                              Text("Submit", style: TextStyle(fontSize: 24.0)),
                            ],
                          )),
-                      onPressed: () => Navigator.of(context).pushNamed('/list'),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => ListPage(
+                            selectedType: selectedType,
+                            selectedSpecial: selectedSpecial,
+                            selectedLocation: selectedLocation,
+                            selectedExp: selectedExp,
+                          )),
+                        );
+                      },
                      shape: new RoundedRectangleBorder(
                          borderRadius: new BorderRadius.circular(30.0))),
                ],
